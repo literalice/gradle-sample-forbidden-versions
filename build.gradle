@@ -1,0 +1,13 @@
+configurations {
+    runtime
+}
+
+dependencies {
+    // runtime "com.lowagie:itext:2.1.7"
+    runtime "com.itextpdf:itextpdf:5.4.4"
+}
+
+task showDependencies << {
+    configurations.runtime.each { File file -> println file.absolutePath }
+}
+
